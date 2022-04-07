@@ -1,29 +1,22 @@
-import { Card, Slider } from "@mui/material";
-import { styled } from "@mui/material/styles";
+import { Wrapper } from "@components/content";
 import type { NextPage } from "next";
-
-const CardComponent = styled(Card)`
-  font-size: 30px;
-  color: white;
-  width: 100%;
-  height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: blue;
-`;
+import Link from "next/link";
 
 const Home: NextPage = () => {
   return (
-    <CardComponent>
-      <Slider
-        defaultValue={30}
-        sx={{
-          width: "100%",
-          color: "error.main",
-        }}
-      />
-    </CardComponent>
+    <Wrapper
+      sx={{
+        backgroundColor: "#000",
+        flex: 1,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <Link href="listRealEstateDevelopersByCities">
+        ir para as construtoras
+      </Link>
+    </Wrapper>
   );
 };
 
